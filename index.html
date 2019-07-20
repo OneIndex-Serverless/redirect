@@ -16,11 +16,11 @@
 			}
 			var state = decodeURI(get('state'));
 			var pair=state.split("*");
-			var url=pair[0];
-			var final=pair[1];
+			var url=decodeURIComponent(pair[0]);
+			var final=decodeURIComponent(pair[1]);
 			var code = get('code');
-			document.getElementById('direct').href = decodeURIComponent(url)+"?code="+code+"&final="+final;
-			window.location = decodeURIComponent(url)+"?code="+code+"&final="+final;
+			document.getElementById('direct').href = url+"?code="+code+"&final="+final;
+			window.location = url+"?code="+code+"&final="+final;
 		</script>
 	</body>
 </html>
