@@ -14,7 +14,7 @@
 			       }
 			       return(false);
 			}
-			var state = get('state');
+			var state = decodeURIComponent(get('state'));
 			var pair=state.split("*");
 			var url=pair[0];
 			var final=pair[1];
